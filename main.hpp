@@ -39,5 +39,23 @@ int writeFile(string filename)
 
 int readFile(string filename)
 {
+    ifstream ifs;
 
+    ifs.open(filename);
+	if (!ifs){
+		cerr << "File open error\n";
+		exit(0);
+	}
+
+    int empNum;
+    string empID, empName, empDep, empSal;
+
+    ifs >> empNum;
+    for (int i=0; i<empNum; i++)
+    {
+        ifs >> empID >> empName >> empDep >> empSal;
+        cout << empID << " " << empName << " " << empDep << " " << empSal << endl;
+    }
+
+    return empNum;
 }
