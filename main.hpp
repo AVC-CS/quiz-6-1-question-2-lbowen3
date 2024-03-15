@@ -24,7 +24,7 @@ int writeFile(string filename)
     cin >> empNum;
     ofs << empNum << endl;
 
-    int empID, empName, empDep, empSal;
+    string empID, empName, empDep, empSal;
 
     for (int i=0; i<empNum; i++)
     {
